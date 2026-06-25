@@ -1,0 +1,416 @@
+/* ============================================
+   nixbyteflowcore.com - Responsive Stylesheet
+   Mobile & Tablet Optimizations
+   ============================================ */
+
+/* Large Desktops */
+@media (max-width: 1440px) {
+    :root {
+        --text-7xl: 4rem;
+        --text-8xl: 5rem;
+    }
+
+    .container {
+        --container-padding: 1.75rem;
+    }
+}
+
+/* Laptops / Small Desktops */
+@media (max-width: 1200px) {
+    :root {
+        --text-7xl: 3.5rem;
+        --text-6xl: 3rem;
+        --text-5xl: 2.5rem;
+    }
+
+    .section {
+        padding: var(--space-24) 0;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    :root {
+        --text-7xl: 3rem;
+        --text-6xl: 2.5rem;
+        --text-5xl: 2.25rem;
+        --text-4xl: 1.875rem;
+        --text-3xl: 1.5rem;
+        --space-32: 6rem;
+        --space-24: 5rem;
+        --space-20: 4rem;
+    }
+
+    .container {
+        --container-padding: 1.5rem;
+    }
+
+    .header-inner {
+        height: 64px;
+    }
+
+    .main-nav {
+        gap: var(--space-6);
+    }
+
+    .hero {
+        padding-top: 64px;
+        min-height: 85vh;
+    }
+
+    /* Mobile menu */
+    .main-nav {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--color-border);
+        padding: var(--space-8) var(--container-padding);
+        gap: var(--space-5);
+        transform: translateY(-150%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-base);
+        z-index: var(--z-sticky);
+    }
+
+    .main-nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .main-nav a {
+        font-size: var(--text-lg);
+        padding: var(--space-3) 0;
+        width: 100%;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hero adjustments */
+    .hero-title {
+        font-size: clamp(2.25rem, 6vw, 3.5rem);
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-base);
+    }
+
+    /* Grid responsive */
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Two-column layouts become single */
+    .two-col {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-8);
+    }
+
+    /* Sidebar layouts */
+    .with-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    :root {
+        --text-7xl: 2.5rem;
+        --text-6xl: 2rem;
+        --text-5xl: 1.875rem;
+        --text-4xl: 1.5rem;
+        --text-3xl: 1.375rem;
+        --text-2xl: 1.25rem;
+        --space-32: 5rem;
+        --space-24: 4rem;
+        --space-20: 3rem;
+        --space-16: 2.5rem;
+    }
+
+    .container {
+        --container-padding: 1.25rem;
+    }
+
+    .header-inner {
+        height: 60px;
+    }
+
+    .site-logo .logo-text {
+        font-size: var(--text-sm);
+    }
+
+    .hero {
+        padding-top: 60px;
+        min-height: 80vh;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 2.75rem);
+        letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-base);
+        margin-bottom: var(--space-8);
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+    }
+
+    /* Section spacing */
+    .section {
+        padding: var(--space-20) 0;
+    }
+
+    .section-header {
+        margin-bottom: var(--space-12);
+    }
+
+    .section-title {
+        font-size: clamp(1.75rem, 6vw, 2.25rem);
+    }
+
+    /* Grids */
+    .grid-4,
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cards */
+    .card {
+        padding: var(--space-6);
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-3);
+    }
+
+    .footer-bottom .footer-legal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-4);
+    }
+
+    /* Buttons */
+    .btn {
+        padding: var(--space-3) var(--space-5);
+        font-size: var(--text-sm);
+    }
+
+    .btn-large {
+        padding: var(--space-4) var(--space-6);
+        font-size: var(--text-base);
+    }
+
+    /* Page header */
+    .page-header {
+        padding-top: calc(60px + var(--space-12));
+        padding-bottom: var(--space-12);
+    }
+
+    .page-title {
+        font-size: clamp(2rem, 7vw, 2.75rem);
+    }
+
+    /* Policy/Terms Layout */
+    .policy-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .policy-sidebar {
+        position: static;
+        max-height: none;
+    }
+
+    .policy-content {
+        padding: var(--space-6);
+    }
+
+    .policy-content h2 {
+        font-size: var(--text-2xl);
+    }
+
+    .policy-content h3 {
+        font-size: var(--text-xl);
+    }
+
+    /* Stats */
+    .stat-value {
+        font-size: var(--text-4xl);
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        max-width: none;
+        margin: var(--space-4);
+    }
+
+    /* Tables */
+    .responsive-table {
+        font-size: var(--text-sm);
+    }
+
+    .responsive-table table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Hide on mobile */
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    :root {
+        --text-7xl: 2rem;
+        --text-6xl: 1.75rem;
+        --text-5xl: 1.5rem;
+        --space-32: 4rem;
+        --space-24: 3rem;
+    }
+
+    .container {
+        --container-padding: 1rem;
+    }
+
+    .hero-eyebrow {
+        font-size: var(--text-xs);
+        padding: var(--space-1) var(--space-3);
+    }
+
+    .hero-title {
+        font-size: 1.875rem;
+    }
+
+    .card {
+        padding: var(--space-5);
+    }
+
+    .section-eyebrow {
+        font-size: var(--text-xs);
+    }
+
+    .tag {
+        font-size: 10px;
+        padding: 2px var(--space-2);
+    }
+
+    .footer-col h5 {
+        font-size: var(--text-xs);
+    }
+
+    .policy-content {
+        padding: var(--space-4);
+    }
+}
+
+/* Landscape orientation on phones */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 100px 0 var(--space-12);
+    }
+}
+
+/* Print styles */
+@media print {
+    .site-header,
+    .site-footer,
+    .menu-toggle,
+    .hero-cta,
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .policy-content {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+}
+
+/* High DPI / Retina */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .site-logo svg,
+    .card-icon svg {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Dark mode forced (we're already dark) */
+@media (prefers-color-scheme: dark) {
+    /* Already dark by default */
+}
+
+/* Reduced transparency for accessibility */
+@media (prefers-reduced-transparency: reduce) {
+    .site-header,
+    .modal-content,
+    .glass {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: var(--color-bg-primary) !important;
+    }
+}

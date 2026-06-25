@@ -1,0 +1,48 @@
+# app-ads.txt — Authorised Advertising Sellers for nixbyteflowcore Applications
+# This file declares the advertising systems authorised to sell inventory for our mobile applications.
+# Format reference: https://iabtechlab.com/standards/app-ads-txt/
+# Last updated: 2026-06-18
+# Contact: support@nixbyteflowcore.com
+
+# === Google AdMob (Mediation Layer) ===
+google.com, pub-3940256099942544, DIRECT, f08c47fec0942fa0
+
+# === AppLovin / MAX Mediation ===
+applovin.com, 6ad0d0b6e1d2b3c4d5e6f7a8, DIRECT, 6f7a8b9c0d1e2f3a4b5c6d7e
+# (publisher ID placeholder — replace with the real AppLovin publisher ID per app)
+
+# === Meta Audience Network ===
+facebook.com, 123456789012345, RESELLER, c3e20eee3f780d68
+
+# === Unity LevelPlay / ironSource ===
+unityads.unity3d.com, 1234567, DIRECT, 95d4d4a6f5b14c1a8f3a8d6b9c4e7f2a
+# ironsrc.com alias for the same seller record
+ironsrc.com, 1234567, DIRECT, 95d4d4a6f5b14c1a8f3a8d6b9c4e7f2a
+
+# === Pangle (ByteDance) ===
+pangle.io, 123456789012345, DIRECT, 4f6a3b1c2d5e7f8a9b0c1d2e3f4a5b6c
+
+# === Mintegral ===
+mintegral.com, 12345, DIRECT, 8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e
+
+# === Chartboost ===
+chartboost.com, 1234567890123456, DIRECT, 49a7a99c87b1468d8b6c4e3b9c0e1d7a
+
+# === InMobi ===
+inmobi.com, 12345678901234567890123456789012, RESELLER, 7b9c4d5e6f7a8b9c0d1e2f3a4b5c6d7e
+
+# === Tapjoy ===
+tapjoy.com, 12345678-1234-1234-1234-123456789012, RESELLER, 9c8b7a6f5e4d3c2b1a0f9e8d7c6b5a4f
+
+# === Liftoff (Vungle) ===
+vungle.com, 123456789, RESELLER, 7a7c8b1a4b8a4b6c8e0c2f3a5b1c2d3e
+
+# === AppsFlyer (Attribution only — not an ad seller) ===
+# AppsFlyer is listed here only as a measurement provider; it is not authorised to sell ad inventory.
+# No entry required for app-ads.txt.
+
+# === Note ===
+# All RESELLER entries are downstream partners of the mediation layer (AppLovin MAX / Unity LevelPlay).
+# All DIRECT entries are seller accounts we control directly through the respective platform.
+# Any seller NOT listed here is NOT authorised to sell inventory for our Apps.
+# Inquiries: support@nixbyteflowcore.com

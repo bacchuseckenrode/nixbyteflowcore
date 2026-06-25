@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="nixbyteflowcore Technical Compliance Guide — 2026 Apple App Store and Google Play technical requirements, ATT framework, Privacy Sandbox, data residency, and app store policy compliance.">
+    <meta name="keywords" content="technical compliance, App Store guidelines 2026, Google Play policy 2026, ATT, Privacy Sandbox, iOS 18, Android 15, data residency, app-ads.txt">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nixbyteflowcore.com/compliance.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Technical Compliance Guide — nixbyteflowcore">
+    <meta property="og:description" content="2026 App Store and Google Play technical compliance guide covering ATT, Privacy Sandbox, data residency, and store policies.">
+    <title>Technical Compliance Guide — nixbyteflowcore</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2300d4ff'/%3E%3Cstop offset='1' stop-color='%230080ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='%23000'/%3E%3Cpath d='M8 22 L16 8 L24 22 M11 17 L21 17' stroke='url(%23g)' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+    <div class="scroll-progress"></div>
+
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a href="index.html" class="site-logo" aria-label="nixbyteflowcore home">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs><linearGradient id="logo-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00d4ff"/><stop offset="1" stop-color="#0080ff"/></linearGradient></defs>
+                    <path d="M6 24 L16 6 L26 24 M10 18 L22 18" stroke="url(#logo-grad)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="16" cy="6" r="2" fill="url(#logo-grad)"/>
+                </svg>
+                <span class="logo-text">nixbyteflowcore</span>
+            </a>
+            <nav class="main-nav" role="navigation" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="advantages.html">Advantages</a>
+                <a href="news.html">News</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <span class="section-eyebrow reveal">// Legal & Engineering</span>
+            <h1 class="page-title reveal">Technical Compliance Guide</h1>
+            <p class="page-subtitle reveal">2026 Global Full-Compliance Edition · Version 4.3 · Effective 18 June 2026 · Covers Apple App Store, Google Play, ATT framework, Privacy Sandbox, data residency, and the 2026 iOS 18 / Android 15 platform requirements.</p>
+        </div>
+    </section>
+
+    <section class="policy-section">
+        <div class="container">
+            <div class="policy-layout">
+                <aside class="policy-sidebar">
+                    <h4>Table of Contents</h4>
+                    <ul class="policy-toc">
+                        <li><a href="#section-1">1. Apple App Store (iOS)</a></li>
+                        <li><a href="#section-2">2. Google Play (Android)</a></li>
+                        <li><a href="#section-3">3. 2026 Data Residency</a></li>
+                        <li><a href="#section-4">4. Interaction Design (UX Compliance)</a></li>
+                        <li><a href="#section-5">5. Compliance Risk Controls</a></li>
+                        <li><a href="#section-6">6. Periodic Review</a></li>
+                        <li><a href="#section-7">7. Contact Channels</a></li>
+                    </ul>
+                </aside>
+
+                <article class="policy-content">
+                    <div class="last-updated">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>Last updated: 18 June 2026</span>
+                    </div>
+
+                    <p>This Technical Compliance Guide combines the latest 2026 policies of the Apple App Store and Google Play with the global regional regulatory requirements of each market. It defines technical execution standards, ensuring full compliance during the development, launch, and operation of all Apps, avoiding risks such as App removal or penalties due to technical violations. This guide is adapted to the latest system version requirements of Android 15 and iOS 18.</p>
+
+                    <h2 id="section-1">1. Apple App Store (iOS) — 2026 Latest Requirements</h2>
+
+                    <h3>1.1 Privacy Labels</h3>
+                    <p>We must accurately fill in the privacy label information in the App Store backend and strictly check "Data Linked to You" (data linked to the user), because data such as IDFA and purchase records will be linked to the user profile. We must not conceal the data linkage relationship. At the same time, we must accurately fill in the scope, purpose, and third-party sharing of data collection, ensuring consistency with this Privacy Policy. Submitting false information will result in the App being rejected or removed from the App Store.</p>
+
+                    <h3>1.2 ATT Mandatory Enforcement (2026 Upgrade Requirements)</h3>
+                    <ul>
+                        <li>Before obtaining the <code>device_id</code> (IDFA), we must first call the <code>requestTrackingAuthorization</code> interface to display a pop-up requesting the user's authorisation. The authorisation copy must clearly inform the user of the purpose of the authorisation (e.g. for precise ad targeting) and must not mislead the user.</li>
+                        <li>If the user refuses authorisation, <code>allow_tracking = false</code> must be passed to all third-party SDKs. We must not obtain or use the IDFA without authorisation, nor circumvent the ATT framework restrictions through other means.</li>
+                        <li>Adapted to the latest iOS 18 requirements, the ATT authorisation pop-up may be displayed only once. The user must not be harassed with multiple pop-ups. If the user refuses authorisation, no further requests for authorisation may be made. The user can only be guided to enable authorisation through the device system settings.</li>
+                        <li>We must not obtain user device identifiers through non-ATT channels, nor use other device parameters (such as MAC address) as an IDFA substitute to circumvent the privacy policy requirements.</li>
+                    </ul>
+
+                    <h3>1.3 Other Technical Compliance Requirements</h3>
+                    <ul>
+                        <li>Apps must not contain hidden features or non-compliant code, and must not circumvent the App Store review rules (e.g. hiding payment entry points, false feature descriptions).</li>
+                        <li>Adapted to the latest iOS 18 privacy requirements, access to sensitive data (e.g. photos, contacts) requires per-use authorisation from the user. Default authorisation or forced authorisation is not permitted.</li>
+                        <li>In-app purchase items must clearly state the price and subscription period. Inducement-based purchase traps must not be set, and the user must not be misled into paying.</li>
+                        <li>If the App includes AI-generated content, it must be clearly marked on the App Store detail page, in compliance with Apple's AI compliance requirements.</li>
+                        <li>Apps distributed in the EU must use the In-App Purchase system for all digital goods and services, and must not direct users to alternative payment methods, in compliance with the Digital Markets Act (DMA).</li>
+                        <li>All submitted binaries must be built with the latest iOS 18 SDK and must declare the minimum supported iOS version in App Store Connect.</li>
+                    </ul>
+
+                    <h2 id="section-2">2. Google Play (Android) — 2026 Latest Requirements</h2>
+
+                    <h3>2.1 Data Safety Form</h3>
+                    <p>We must accurately fill in the Data Safety Form in the Google Play backend, explicitly declaring that the data in transit is protected by encryption (HTTPS protocol must be used) and that the data at rest is protected by AES-256 encryption. We must accurately fill in the scope, purpose, and third-party sharing of data collection, and must not conceal data processing behaviour. Submitting false information will result in the App being rejected or removed.</p>
+
+                    <h3>2.2 SDK Transparency (2026 Upgrade Requirements)</h3>
+                    <ul>
+                        <li>Google requires developers to bear full responsibility for the behaviour of the third-party SDKs they integrate. We must ensure that all integrated SDK versions support the latest Android 14+ Privacy Sandbox. Outdated SDKs (which may contain privacy or security vulnerabilities) must not be used.</li>
+                        <li>We must publicly disclose in the Google Play backend a list of all integrated third-party SDKs, clearly stating the SDK name, purpose, and data collection scope, ensuring that the SDK's data processing behaviour is compliant. If an SDK has non-compliant data collection behaviour, the SDK must be removed immediately and the App must be rectified.</li>
+                        <li>Adapted to the latest Android 15 requirements, the integrated SDK must not request permissions unrelated to the App's functionality, must not collect user personal information without authorisation, and must not interfere with the normal operation of the device.</li>
+                        <li>If the App supports the Android 15 Private Space feature, the logic must be adjusted based on the App's type. Medical Apps must clearly inform users not to install them in Private Space to avoid affecting the operation of core functions. Launcher Apps must declare the relevant permissions and adapt to the display requirements of Private Space Apps.</li>
+                    </ul>
+
+                    <h3>2.3 Other Technical Compliance Requirements</h3>
+                    <ul>
+                        <li>Adapted to the latest Android 15 privacy protection measures, supporting the OTP (one-time password) hiding feature. During screen sharing, sensitive content is hidden, and sensitive App fields can be manually marked to protect user privacy.</li>
+                        <li>Apps must not contain malicious code or ad plug-ins, must not force push ads, and must not induce users to click ads. Ad display must comply with the Google Play ad policy.</li>
+                        <li>Apps must support 64-bit architecture, and must not provide only 32-bit versions, ensuring compatibility with the latest Android devices.</li>
+                        <li>If the App includes subscription services, the subscription management entry must be clearly marked in the App, and users must be able to cancel the subscription at any time, in compliance with the Google Play subscription policy.</li>
+                        <li>All submitted APKs / AABs must target the latest API level (Android 15, API 35) and must declare all sensitive permissions in the manifest with a clear justification.</li>
+                    </ul>
+
+                    <h2 id="section-3">3. 2026 Data Residency Compliance</h2>
+                    <p>With the rising global awareness of data sovereignty in 2026, more countries and regions have introduced stricter data localisation requirements. We must strictly follow the rules below to avoid violations:</p>
+                    <ul>
+                        <li>If the App has a large user base in a specific country / region (e.g. China, India, Saudi Arabia, Brazil, the EU, Canada) (the specific threshold is subject to local regulations), the local user data must be stored on compliant servers within the country / region, and must not be transferred abroad without authorisation.</li>
+                        <li>Cross-border data transfers must strictly follow local regulatory requirements, such as the GDPR adequacy decision of the EU, the security assessment / standard contract requirements of China's "Provisions on Promoting and Regulating the Cross-Border Flow of Data," and the cross-border transfer approval requirements of India's DPDP Act. User data must not be transferred abroad without approval.</li>
+                        <li>With respect to the global data sovereignty disputes mentioned in the 2026 U.S. Trade Report, attention must be paid to avoiding trade compliance risks triggered by cross-border data transfers. If the App is targeted at U.S. users, it must follow the requirements of the CLOUD Act and cooperate with U.S. regulatory authorities' data access requests (where applicable).</li>
+                        <li>Data storage locations must be reviewed regularly to ensure compliance with local regulatory changes, such as Canada, Japan, Bolivia, Colombia, and other countries that have introduced new data localisation requirements in 2026. Data storage strategies must be adjusted in a timely manner to avoid violations.</li>
+                        <li>A data residency compliance ledger must be established to record user data storage locations and transfer situations. Regular compliance self-checks must be carried out, and we must cooperate with inspections by local regulatory authorities.</li>
+                    </ul>
+
+                    <h2 id="section-4">4. Interaction Design Recommendations (UX Compliance)</h2>
+
+                    <h3>4.1 Double Confirmation Mechanism</h3>
+                    <ul>
+                        <li>Before the user makes a large-value IAP purchase (recommended single amount ≥ USD / EUR 50), an in-app secondary confirmation pop-up must be added, clearly informing the user of the purchase amount, product name, and payment method. The user must manually click "Confirm Purchase" before the App jumps to the payment page, to avoid mistaken operations.</li>
+                        <li>For auto-renewing subscriptions, after the user clicks the "Subscribe" button, a confirmation pop-up must appear again, clearly informing the user of the subscription period, price, and renewal rules, to avoid mistaken subscription by the user.</li>
+                    </ul>
+
+                    <h3>4.2 Easy Accessibility of the Privacy Policy (Mandatory Requirement)</h3>
+                    <p>The link to the Privacy Policy must exist in all three of the following locations simultaneously, ensuring that users can view it at any time and meeting global compliance requirements:</p>
+                    <ol>
+                        <li>App Store detail page (in a prominent position on the App Store / Google Play description page)</li>
+                        <li>App launch splash screen (or login page). The user can click the link to view the full Privacy Policy. The splash screen must be set with "Agree" and "Refuse" buttons. If the user refuses, the App must not be used.</li>
+                        <li>In-app "Settings" or "About" menu. The link must be placed in a prominent position, and the user can directly view the Privacy Policy by clicking it, supporting user access at any time.</li>
+                    </ol>
+
+                    <h3>4.3 Other Interaction Compliance Recommendations</h3>
+                    <ul>
+                        <li><strong>Permission Requests:</strong> When requesting the user to grant permissions (e.g. camera, photo album, location), the purpose of the permission must be clearly stated. Default authorisation or forced authorisation is not permitted. The user can withdraw the authorisation at any time in the App or in the device system settings.</li>
+                        <li><strong>Ad Interaction:</strong> Rewarded video ads must be clearly marked with "Watch the full ad to earn a reward," and a "Skip Ad" button must be provided (the ad can be skipped after 5 seconds of playback). Users must not be forced to watch ads.</li>
+                        <li><strong>Complaint Feedback:</strong> Convenient complaint feedback channels must be set in the App, including privacy complaints, ad complaints, and UGC content complaints. The processing time limit must be clearly stated (no more than 7 working days), and the processing result must be fed back to the user.</li>
+                        <li><strong>Transparency Display:</strong> In a prominent position in the App, ad delivery rules, algorithm recommendation logic, and data processing flow (simplified version) must be displayed, meeting the DSA transparency requirements and ensuring the user's right to know.</li>
+                        <li><strong>Screen Sharing Indicator:</strong> Adapted to the latest Android 15 requirements. During screen sharing, screen casting, or screen recording, a prominent notification tag must be displayed in the status bar to remind the user that the screen is currently being shared. The user can click the tag to quickly stop sharing.</li>
+                        <li><strong>Ad Frequency Capping:</strong> Cap interstitial frequency at one per minute per session, rewarded video at one per three minutes per session, and ensure that banners do not refresh more than once per 30 seconds.</li>
+                    </ul>
+
+                    <h2 id="section-5">5. Compliance Risk Controls</h2>
+                    <ul>
+                        <li><strong>Establish a compliance review mechanism:</strong> Before App development and launch, conduct a comprehensive compliance review of the App code, Privacy Policy, Service Agreement, and interaction design, ensuring compliance with App Store, Google Play policies, and global regional regulatory requirements, avoiding violations.</li>
+                        <li><strong>Update compliance knowledge regularly:</strong> Designate dedicated personnel to monitor the latest changes in global privacy regulations and app store policies (such as U.S. state privacy laws, EU DSA updates, and Android 15 / iOS 18 system policy changes), and adjust the App and agreement content in a timely manner.</li>
+                        <li><strong>Third-party partner management:</strong> Regularly review the compliance of third-party ad platforms, SDK providers, and payment processors, sign compliance agreements, clarify data processing responsibilities, and immediately terminate cooperation if a third party engages in non-compliant behaviour.</li>
+                        <li><strong>User request handling:</strong> Establish a processing mechanism for user data-related requests (access, rectification, deletion, complaints), ensuring response and handling within the prescribed time limit, retaining processing records, and accepting supervision by users and regulatory authorities.</li>
+                        <li><strong>Security:</strong> Strengthen App data security, adopt encrypted storage, transmission encryption, access control, and other technologies to prevent data leakage, tampering, and loss. Conduct regular data security testing and risk assessments.</li>
+                        <li><strong>Employee training:</strong> Regularly conduct compliance training for R&D, operations, customer service, and other related employees, popularise privacy regulations, app store policies, and anti-fraud rules, enhance employee compliance awareness, and avoid violations caused by improper operation.</li>
+                        <li><strong>Incident response plan:</strong> Maintain a documented incident response plan with a 72-hour breach notification commitment to EU / UK regulators and affected users where required.</li>
+                    </ul>
+
+                    <h2 id="section-6">6. Periodic Review Requirements</h2>
+                    <p>As the global legal environment (especially U.S. state privacy laws and EU DSA implementation rules) is constantly changing, and app store policies and technical standards are constantly being updated, it is recommended to conduct a routine review of this Agreement and the App's compliance every 6 months. The specific review contents include:</p>
+                    <ul>
+                        <li><strong>Agreement Clauses:</strong> Check whether the agreement clauses comply with the latest regulations and app store policies, and whether new regional compliance clauses need to be added or modified (e.g. new regional compliance clauses, updated anti-fraud penalty rules).</li>
+                        <li><strong>App Compliance:</strong> Check whether the App code, SDK versions, and interaction design comply with the latest technical compliance requirements (e.g. Android 15 / iOS 18 adaptation, ATT framework execution).</li>
+                        <li><strong>Data Processing:</strong> Check whether the data collection, storage, transmission, and sharing processes are compliant, whether the data residency meets local requirements, and whether the third-party data sharing is controllable.</li>
+                        <li><strong>Anti-Fraud Mechanism:</strong> Check whether the ad and IAP anti-fraud rules are sound, and whether the penalty measures need to be updated based on the latest fraud methods.</li>
+                        <li><strong>User Requests:</strong> Check the handling of user data-related requests to see if there is any failure to respond in a timely manner or improper handling, and optimise the handling process.</li>
+                    </ul>
+
+                    <h2 id="section-7">7. Contact Channels</h2>
+                    <p>If you have any questions, feedback, or complaints, please contact us through the following channels:</p>
+                    <ul>
+                        <li><strong>General Support:</strong> <a href="mailto:support@nixbyteflowcore.com">support@nixbyteflowcore.com</a></li>
+                        <li><strong>Privacy & Data Protection Officer:</strong> <a href="mailto:privacy@nixbyteflowcore.com">privacy@nixbyteflowcore.com</a></li>
+                        <li><strong>Compliance & Legal:</strong> <a href="mailto:legal@nixbyteflowcore.com">legal@nixbyteflowcore.com</a></li>
+                        <li><strong>EU Statutory Representative:</strong> <a href="mailto:euro-rep@nixbyteflowcore.com">euro-rep@nixbyteflowcore.com</a></li>
+                        <li><strong>UK Statutory Representative:</strong> <a href="mailto:uk-rep@nixbyteflowcore.com">uk-rep@nixbyteflowcore.com</a></li>
+                        <li><strong>Postal Address:</strong> Compliance Team, nixbyteflowcore, Warwick Software Industry Park, United Kingdom</li>
+                    </ul>
+
+                    <p style="text-align:center;margin-top:48px;font-family:var(--font-mono);font-size:12px;color:var(--color-text-muted);">— End of Technical Compliance Guide —<br>nixbyteflowcore · Version 4.3 · 18 June 2026</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="site-logo">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <defs><linearGradient id="logo-grad-footer" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00d4ff"/><stop offset="1" stop-color="#0080ff"/></linearGradient></defs>
+                            <path d="M6 24 L16 6 L26 24 M10 18 L22 18" stroke="url(#logo-grad-footer)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="16" cy="6" r="2" fill="url(#logo-grad-footer)"/>
+                        </svg>
+                        <span class="logo-text">nixbyteflowcore</span>
+                    </a>
+                    <p>A research-driven engineering team building privacy-first, locally archived, minimalist digital products for households across Europe and the United States.</p>
+                    <p style="font-family: var(--font-mono); font-size: 12px; color: var(--color-text-muted);">Warwick Software Industry Park, United Kingdom</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="advantages.html">Advantages</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><a href="mailto:support@nixbyteflowcore.com">support@nixbyteflowcore.com</a></li>
+                        <li><a href="mailto:contact@nixbyteflowcore.com">contact@nixbyteflowcore.com</a></li>
+                        <li><a href="contact.html">Contact Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Service Agreement</a></li>
+                        <li><a href="compliance.html">Technical Compliance</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 nixbyteflowcore. All rights reserved. Crafted in the United Kingdom.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="compliance.html">Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script>
+        document.querySelectorAll('.policy-toc a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 100;
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                }
+            });
+        });
+
+        const tocLinks = document.querySelectorAll('.policy-toc a');
+        const sections = document.querySelectorAll('.policy-content h2[id]');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    tocLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+                    });
+                }
+            });
+        }, { rootMargin: '-100px 0px -70% 0px' });
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
