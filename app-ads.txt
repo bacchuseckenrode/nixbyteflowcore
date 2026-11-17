@@ -1,2 +1,4 @@
 # google
 google.com, pub-1707743484049168, DIRECT, f08c47fec0942fa0
+# meta
+facebook.com, 968184419478970, RESELLER, c3e20eee3f780d68
